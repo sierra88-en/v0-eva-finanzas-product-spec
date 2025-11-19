@@ -9,11 +9,11 @@ export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <nav className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur-sm">
+    <nav className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur-sm" aria-label="Navegación principal">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center">
-            <Link href="/" className="text-xl font-bold text-emerald-600">
+            <Link href="/" className="text-xl font-bold text-emerald-600" aria-label="EVA Finanzas - Página principal">
               EVA Finanzas
             </Link>
           </div>
@@ -42,8 +42,10 @@ export function Navbar() {
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="inline-flex items-center justify-center rounded-md p-2 text-slate-700 hover:bg-slate-100"
+              aria-expanded={mobileMenuOpen}
+              aria-label={mobileMenuOpen ? 'Cerrar menú' : 'Abrir menú'}
             >
-              {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {mobileMenuOpen ? <X className="h-6 w-6" aria-hidden="true" /> : <Menu className="h-6 w-6" aria-hidden="true" />}
             </button>
           </div>
         </div>
