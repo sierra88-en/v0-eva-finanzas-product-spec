@@ -2,10 +2,14 @@ import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 import { ArrowRight, CheckCircle, TrendingUp, DollarSign, Users, Shield, BarChart3, Zap, Target, Building2 } from 'lucide-react'
 import Link from 'next/link'
+import { Navbar } from '@/components/navbar'
+import { Footer } from '@/components/footer'
 
 export default function LandingPage() {
   return (
     <div className="min-w-0">
+      <Navbar />
+
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-b from-slate-50 to-white py-20 sm:py-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -17,11 +21,13 @@ export default function LandingPage() {
               EVA Finanzas calcula automáticamente tu EVA (Economic Value Added), transforma tu contabilidad en métricas estratégicas y te dice si estás generando riqueza real.
             </p>
             <div className="mt-10 flex items-center justify-center gap-4">
-              <Button size="lg" className="gap-2">
-                Comenzar Gratis <ArrowRight className="h-5 w-5" />
+              <Button size="lg" className="gap-2" asChild>
+                <Link href="/demo">
+                  Comenzar Gratis <ArrowRight className="h-5 w-5" />
+                </Link>
               </Button>
-              <Button size="lg" variant="outline">
-                Ver Demo
+              <Button size="lg" variant="outline" asChild>
+                <Link href="/demo">Ver Demo</Link>
               </Button>
             </div>
             <p className="mt-4 text-sm text-slate-500">
@@ -377,11 +383,13 @@ export default function LandingPage() {
               Únete a cientos de empresas que ya toman decisiones basadas en EVA, no en intuición.
             </p>
             <div className="mt-8 flex items-center justify-center gap-4">
-              <Button size="lg" variant="secondary" className="gap-2">
-                Comenzar Gratis <ArrowRight className="h-5 w-5" />
+              <Button size="lg" variant="secondary" className="gap-2" asChild>
+                <Link href="/demo">
+                  Comenzar Gratis <ArrowRight className="h-5 w-5" />
+                </Link>
               </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-emerald-700">
-                Agendar Demo
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-emerald-700" asChild>
+                <Link href="/contact">Agendar Demo</Link>
               </Button>
             </div>
             <p className="mt-4 text-sm text-emerald-100">
@@ -391,49 +399,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-slate-900 py-12">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            <div>
-              <h3 className="text-lg font-semibold text-white">EVA Finanzas</h3>
-              <p className="mt-2 text-sm text-slate-400">
-                La plataforma de gestión basada en valor económico agregado para PYMEs de Latinoamérica.
-              </p>
-            </div>
-            <div>
-              <h4 className="text-sm font-semibold text-white">Producto</h4>
-              <ul className="mt-4 space-y-2 text-sm text-slate-400">
-                <li><Link href="#" className="hover:text-white">Características</Link></li>
-                <li><Link href="#" className="hover:text-white">Precios</Link></li>
-                <li><Link href="#" className="hover:text-white">Integraciones</Link></li>
-                <li><Link href="#" className="hover:text-white">Casos de éxito</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-sm font-semibold text-white">Recursos</h4>
-              <ul className="mt-4 space-y-2 text-sm text-slate-400">
-                <li><Link href="#" className="hover:text-white">Blog</Link></li>
-                <li><Link href="#" className="hover:text-white">Guía de EVA</Link></li>
-                <li><Link href="#" className="hover:text-white">API Docs</Link></li>
-                <li><Link href="#" className="hover:text-white">Soporte</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-sm font-semibold text-white">Empresa</h4>
-              <ul className="mt-4 space-y-2 text-sm text-slate-400">
-                <li><Link href="#" className="hover:text-white">Acerca de</Link></li>
-                <li><Link href="#" className="hover:text-white">Contacto</Link></li>
-                <li><Link href="#" className="hover:text-white">Términos</Link></li>
-                <li><Link href="#" className="hover:text-white">Privacidad</Link></li>
-              </ul>
-            </div>
-          </div>
-          <div className="mt-12 border-t border-slate-800 pt-8 text-center text-sm text-slate-400">
-            © 2025 EVA Finanzas. Todos los derechos reservados. | www.evafinanzas.com
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }
