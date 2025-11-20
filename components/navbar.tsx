@@ -13,26 +13,26 @@ export function Navbar() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center">
-            <Link href="/" className="text-xl font-bold text-emerald-600" aria-label="EVA Finanzas - Página principal">
+            <Link href="/" className="text-xl font-bold text-emerald-600 transition-colors hover:text-emerald-700 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 rounded" aria-label="EVA Finanzas - Página principal">
               EVA Finanzas
             </Link>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden items-center gap-6 md:flex">
-            <Link href="/features" className="text-sm font-medium text-slate-700 hover:text-emerald-600">
+            <Link href="/features" className="text-sm font-medium text-slate-700 transition-colors hover:text-emerald-600 focus:outline-none focus:ring-2 focus:ring-emerald-500 rounded px-2 py-1">
               Características
             </Link>
-            <Link href="/pricing" className="text-sm font-medium text-slate-700 hover:text-emerald-600">
+            <Link href="/pricing" className="text-sm font-medium text-slate-700 transition-colors hover:text-emerald-600 focus:outline-none focus:ring-2 focus:ring-emerald-500 rounded px-2 py-1">
               Precios
             </Link>
-            <Link href="/demo" className="text-sm font-medium text-slate-700 hover:text-emerald-600">
+            <Link href="/demo" className="text-sm font-medium text-slate-700 transition-colors hover:text-emerald-600 focus:outline-none focus:ring-2 focus:ring-emerald-500 rounded px-2 py-1">
               Demo
             </Link>
-            <Link href="/contact" className="text-sm font-medium text-slate-700 hover:text-emerald-600">
+            <Link href="/contact" className="text-sm font-medium text-slate-700 transition-colors hover:text-emerald-600 focus:outline-none focus:ring-2 focus:ring-emerald-500 rounded px-2 py-1">
               Contacto
             </Link>
-            <Button size="sm" asChild>
+            <Button size="sm" asChild className="transition-all hover:scale-105">
               <Link href="/demo">Comenzar Gratis</Link>
             </Button>
           </div>
@@ -41,9 +41,10 @@ export function Navbar() {
           <div className="flex md:hidden">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="inline-flex items-center justify-center rounded-md p-2 text-slate-700 hover:bg-slate-100"
+              className="inline-flex items-center justify-center rounded-md p-2 text-slate-700 transition-colors hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-emerald-500"
               aria-expanded={mobileMenuOpen}
-              aria-label={mobileMenuOpen ? 'Cerrar menú' : 'Abrir menú'}
+              aria-label={mobileMenuOpen ? 'Cerrar menú de navegación' : 'Abrir menú de navegación'}
+              aria-controls="mobile-menu"
             >
               {mobileMenuOpen ? <X className="h-6 w-6" aria-hidden="true" /> : <Menu className="h-6 w-6" aria-hidden="true" />}
             </button>
@@ -52,32 +53,32 @@ export function Navbar() {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="border-t border-slate-200 py-4 md:hidden">
+          <div id="mobile-menu" className="border-t border-slate-200 py-4 md:hidden" role="navigation" aria-label="Navegación móvil">
             <div className="flex flex-col gap-4">
               <Link
                 href="/features"
-                className="text-sm font-medium text-slate-700 hover:text-emerald-600"
+                className="text-sm font-medium text-slate-700 transition-colors hover:text-emerald-600 focus:outline-none focus:ring-2 focus:ring-emerald-500 rounded px-2 py-1"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Características
               </Link>
               <Link
                 href="/pricing"
-                className="text-sm font-medium text-slate-700 hover:text-emerald-600"
+                className="text-sm font-medium text-slate-700 transition-colors hover:text-emerald-600 focus:outline-none focus:ring-2 focus:ring-emerald-500 rounded px-2 py-1"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Precios
               </Link>
               <Link
                 href="/demo"
-                className="text-sm font-medium text-slate-700 hover:text-emerald-600"
+                className="text-sm font-medium text-slate-700 transition-colors hover:text-emerald-600 focus:outline-none focus:ring-2 focus:ring-emerald-500 rounded px-2 py-1"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Demo
               </Link>
               <Link
                 href="/contact"
-                className="text-sm font-medium text-slate-700 hover:text-emerald-600"
+                className="text-sm font-medium text-slate-700 transition-colors hover:text-emerald-600 focus:outline-none focus:ring-2 focus:ring-emerald-500 rounded px-2 py-1"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Contacto

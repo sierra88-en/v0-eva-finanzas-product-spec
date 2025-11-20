@@ -29,16 +29,16 @@ export default function LandingPage() {
               <h1 id="hero-heading" className="text-balance text-5xl font-bold tracking-tight text-slate-900 sm:text-6xl lg:text-7xl">
                 ¿Tu empresa crea o destruye <span className="text-emerald-600">valor real</span>?
               </h1>
-              <p className="mt-6 text-pretty text-lg leading-8 text-slate-600 sm:text-xl">
+              <p className="mt-6 text-pretty text-lg leading-relaxed text-slate-600 sm:text-xl">
                 EVA Finanzas calcula automáticamente tu EVA (Economic Value Added), transforma tu contabilidad en métricas estratégicas y te dice si estás generando riqueza real.
               </p>
-              <div className="mt-10 flex items-center justify-center gap-4">
-                <Button size="lg" className="gap-2" asChild>
+              <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+                <Button size="lg" className="gap-2 transition-all hover:scale-105 focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2" asChild>
                   <Link href="/demo">
                     Comenzar Gratis <ArrowRight className="h-5 w-5" aria-hidden="true" />
                   </Link>
                 </Button>
-                <Button size="lg" variant="outline" asChild>
+                <Button size="lg" variant="outline" className="transition-all hover:scale-105 focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2" asChild>
                   <Link href="/demo">Ver Demo</Link>
                 </Button>
               </div>
@@ -56,21 +56,21 @@ export default function LandingPage() {
               <h2 id="problem-heading" className="text-balance text-3xl font-bold text-white sm:text-4xl">
                 El problema que toda PYME enfrenta
               </h2>
-              <p className="mt-6 text-pretty text-lg leading-relaxed text-slate-300">
+              <p className="mt-6 text-pretty text-lg leading-relaxed text-slate-200">
                 Tienes utilidades contables, pero <strong className="text-white">¿realmente generas valor?</strong> La contabilidad tradicional no te dice si tu negocio está creando riqueza después de considerar el costo del capital.
               </p>
               <div className="mt-12 grid gap-6 sm:grid-cols-3">
-                <Card className="bg-slate-800 p-6 text-white border-slate-700">
+                <Card className="bg-slate-800 border-slate-700 p-6 text-white transition-all hover:bg-slate-750 hover:scale-105">
                   <div className="text-4xl font-bold text-red-400" aria-label="87 por ciento">87%</div>
-                  <p className="mt-2 text-sm text-slate-300">de las PYMEs no conocen su EVA real</p>
+                  <p className="mt-2 text-sm text-slate-200">de las PYMEs no conocen su EVA real</p>
                 </Card>
-                <Card className="bg-slate-800 p-6 text-white border-slate-700">
+                <Card className="bg-slate-800 border-slate-700 p-6 text-white transition-all hover:bg-slate-750 hover:scale-105">
                   <div className="text-4xl font-bold text-red-400">$0</div>
-                  <p className="mt-2 text-sm text-slate-300">valor creado si tu rentabilidad {'<'} WACC</p>
+                  <p className="mt-2 text-sm text-slate-200">valor creado si tu rentabilidad {'<'} WACC</p>
                 </Card>
-                <Card className="bg-slate-800 p-6 text-white border-slate-700">
+                <Card className="bg-slate-800 border-slate-700 p-6 text-white transition-all hover:bg-slate-750 hover:scale-105">
                   <div className="text-4xl font-bold text-red-400">0</div>
-                  <p className="mt-2 text-sm text-slate-300">herramientas accesibles para calcular EVA</p>
+                  <p className="mt-2 text-sm text-slate-200">herramientas accesibles para calcular EVA</p>
                 </Card>
               </div>
             </div>
@@ -84,68 +84,68 @@ export default function LandingPage() {
               <h2 id="solution-heading" className="text-balance text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
                 La solución: EVA automatizado y profesional
               </h2>
-              <p className="mt-4 text-pretty text-lg text-slate-600">
+              <p className="mt-4 text-pretty text-lg text-slate-600 leading-relaxed">
                 EVA Finanzas hace el trabajo pesado por ti: ajustes contables, cálculo de WACC, proyecciones y análisis estratégico.
               </p>
             </div>
 
             <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-              <Card className="p-8">
+              <Card className="p-8 transition-all hover:shadow-lg hover:scale-105">
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-100" aria-hidden="true">
                   <Zap className="h-6 w-6 text-emerald-600" />
                 </div>
                 <h3 className="mt-4 text-xl font-semibold text-slate-900">Cálculo Automático</h3>
-                <p className="mt-2 text-slate-600">
+                <p className="mt-2 text-slate-600 leading-relaxed">
                   Transforma tu contabilidad tradicional en EVA real con ajustes automáticos de I+D, leasing, activos improductivos y más.
                 </p>
               </Card>
 
-              <Card className="p-8">
+              <Card className="p-8 transition-all hover:shadow-lg hover:scale-105">
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100" aria-hidden="true">
                   <TrendingUp className="h-6 w-6 text-blue-600" />
                 </div>
                 <h3 className="mt-4 text-xl font-semibold text-slate-900">WACC Profesional</h3>
-                <p className="mt-2 text-slate-600">
+                <p className="mt-2 text-slate-600 leading-relaxed">
                   Calcula tu Costo Promedio Ponderado de Capital con betas comparables, riesgo país y fórmula de Hamada.
                 </p>
               </Card>
 
-              <Card className="p-8">
+              <Card className="p-8 transition-all hover:shadow-lg hover:scale-105">
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-purple-100" aria-hidden="true">
                   <Target className="h-6 w-6 text-purple-600" />
                 </div>
                 <h3 className="mt-4 text-xl font-semibold text-slate-900">Escenarios Estratégicos</h3>
-                <p className="mt-2 text-slate-600">
+                <p className="mt-2 text-slate-600 leading-relaxed">
                   Modela "qué pasaría si..." con cambios en deuda, inversiones, costos operativos y más.
                 </p>
               </Card>
 
-              <Card className="p-8">
+              <Card className="p-8 transition-all hover:shadow-lg hover:scale-105">
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-orange-100" aria-hidden="true">
                   <Building2 className="h-6 w-6 text-orange-600" />
                 </div>
                 <h3 className="mt-4 text-xl font-semibold text-slate-900">EVA por Unidades</h3>
-                <p className="mt-2 text-slate-600">
+                <p className="mt-2 text-slate-600 leading-relaxed">
                   Desagrega tu EVA por departamento, sucursal o proyecto. Identifica dónde creas y dónde destruyes valor.
                 </p>
               </Card>
 
-              <Card className="p-8">
+              <Card className="p-8 transition-all hover:shadow-lg hover:scale-105">
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-pink-100" aria-hidden="true">
                   <Users className="h-6 w-6 text-pink-600" />
                 </div>
                 <h3 className="mt-4 text-xl font-semibold text-slate-900">Compensaciones EVA</h3>
-                <p className="mt-2 text-slate-600">
+                <p className="mt-2 text-slate-600 leading-relaxed">
                   Liga bonos gerenciales a la creación de valor real con Bonus Bank automático.
                 </p>
               </Card>
 
-              <Card className="p-8">
+              <Card className="p-8 transition-all hover:shadow-lg hover:scale-105">
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-100" aria-hidden="true">
                   <BarChart3 className="h-6 w-6 text-cyan-600" />
                 </div>
                 <h3 className="mt-4 text-xl font-semibold text-slate-900">Dashboard Ejecutivo</h3>
-                <p className="mt-2 text-slate-600">
+                <p className="mt-2 text-slate-600 leading-relaxed">
                   Visualiza tu EVA histórico, drivers de valor, NOPAT, capital invertido y tendencias en tiempo real.
                 </p>
               </Card>
@@ -391,20 +391,20 @@ export default function LandingPage() {
               <h2 id="cta-heading" className="text-balance text-3xl font-bold tracking-tight text-white sm:text-4xl">
                 Descubre si tu empresa crea valor real
               </h2>
-              <p className="mt-4 text-pretty text-lg text-emerald-100">
+              <p className="mt-4 text-pretty text-lg leading-relaxed text-emerald-50">
                 Únete a cientos de empresas que ya toman decisiones basadas en EVA, no en intuición.
               </p>
-              <div className="mt-8 flex items-center justify-center gap-4">
-                <Button size="lg" variant="secondary" className="gap-2" asChild>
+              <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+                <Button size="lg" variant="secondary" className="gap-2 transition-all hover:scale-105 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-emerald-600" asChild>
                   <Link href="/demo">
                     Comenzar Gratis <ArrowRight className="h-5 w-5" aria-hidden="true" />
                   </Link>
                 </Button>
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-emerald-700" asChild>
+                <Button size="lg" variant="outline" className="border-2 border-white bg-transparent text-white transition-all hover:bg-white hover:text-emerald-600 hover:scale-105 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-emerald-600" asChild>
                   <Link href="/contact">Agendar Demo</Link>
                 </Button>
               </div>
-              <p className="mt-4 text-sm text-emerald-100">
+              <p className="mt-4 text-sm text-emerald-50">
                 14 días gratis • No requiere tarjeta • Soporte en español
               </p>
             </div>

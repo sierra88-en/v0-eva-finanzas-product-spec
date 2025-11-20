@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/og-image.png',
+        url: '/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'EVA Finanzas - Plataforma de gestión basada en valor económico',
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'EVA Finanzas - ¿Tu empresa crea o destruye valor?',
     description: 'Calcula tu EVA automáticamente y descubre si tu negocio genera riqueza real.',
-    images: ['/og-image.png'],
+    images: ['/og-image.jpg'],
   },
   robots: {
     index: true,
@@ -80,18 +80,32 @@ export default function RootLayout({
               '@type': 'SoftwareApplication',
               name: 'EVA Finanzas',
               applicationCategory: 'BusinessApplication',
+              operatingSystem: 'Web',
+              description: 'Plataforma de gestión financiera basada en Economic Value Added (EVA) para PYMEs',
+              url: 'https://www.evafinanzas.com',
               offers: {
-                '@type': 'Offer',
-                price: '16',
+                '@type': 'AggregateOffer',
+                lowPrice: '16',
+                highPrice: '119',
                 priceCurrency: 'USD',
+                offerCount: '3',
               },
               aggregateRating: {
                 '@type': 'AggregateRating',
                 ratingValue: '4.8',
                 ratingCount: '127',
+                bestRating: '5',
+                worstRating: '1',
               },
-              operatingSystem: 'Web',
-              description: 'Plataforma de gestión financiera basada en Economic Value Added (EVA) para PYMEs',
+              contactPoint: {
+                '@type': 'ContactPoint',
+                telephone: '+52-999-570-8837',
+                contactType: 'Customer Service',
+                email: 'sierrascompany2025@gmail.com',
+                availableLanguage: ['Spanish', 'English'],
+              },
+              keywords: 'EVA, Economic Value Added, WACC, finanzas empresariales, PYMEs',
+              inLanguage: 'es-MX',
             }),
           }}
         />
