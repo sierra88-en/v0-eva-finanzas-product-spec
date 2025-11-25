@@ -1,48 +1,61 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
+import type React from "react"
+import type { Metadata } from "next"
+import { Inter } from "next/font/google"
+import "./globals.css"
 
-const inter = Inter({ 
-  subsets: ['latin'],
-  display: 'swap',
-  preload: true
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  preload: true,
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.evafinanzas.com'),
+  metadataBase: new URL("https://www.evafinanzas.com"),
   title: {
-    default: 'EVA Finanzas - ¿Tu empresa crea o destruye valor real?',
-    template: '%s | EVA Finanzas'
+    default: "EVA Finanzas - ¿Tu empresa crea o destruye valor real?",
+    template: "%s | EVA Finanzas",
   },
-  description: 'Calcula automáticamente tu EVA (Economic Value Added), transforma tu contabilidad en métricas estratégicas y toma decisiones basadas en creación de valor real.',
-  keywords: ['EVA', 'Economic Value Added', 'Valor Económico Agregado', 'WACC', 'finanzas empresariales', 'gestión financiera', 'PYMEs', 'México', 'Latinoamérica'],
-  authors: [{ name: 'EVA Finanzas' }],
-  creator: 'EVA Finanzas',
-  publisher: 'EVA Finanzas',
+  description:
+    "Calcula automáticamente tu EVA (Economic Value Added), transforma tu contabilidad en métricas estratégicas y toma decisiones basadas en creación de valor real.",
+  keywords: [
+    "EVA",
+    "Economic Value Added",
+    "Valor Económico Agregado",
+    "WACC",
+    "finanzas empresariales",
+    "gestión financiera",
+    "PYMEs",
+    "México",
+    "Latinoamérica",
+  ],
+  authors: [{ name: "EVA Finanzas" }],
+  creator: "EVA Finanzas",
+  publisher: "EVA Finanzas",
   alternates: {
-    canonical: 'https://www.evafinanzas.com',
+    canonical: "https://www.evafinanzas.com",
   },
   openGraph: {
-    title: 'EVA Finanzas - Gestión basada en valor económico agregado',
-    description: 'La plataforma que permite a PYMEs calcular su EVA real, entender si crean valor y tomar decisiones estratégicas.',
-    url: 'https://www.evafinanzas.com',
-    siteName: 'EVA Finanzas',
-    locale: 'es_MX',
-    type: 'website',
+    title: "EVA Finanzas - Gestión basada en valor económico agregado",
+    description:
+      "La plataforma que permite a PYMEs calcular su EVA real, entender si crean valor y tomar decisiones estratégicas.",
+    url: "https://www.evafinanzas.com",
+    siteName: "EVA Finanzas",
+    locale: "es_MX",
+    type: "website",
     images: [
       {
-        url: '/og-image.jpg',
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: 'EVA Finanzas - Plataforma de gestión basada en valor económico',
+        alt: "EVA Finanzas - Plataforma de gestión basada en valor económico",
       },
     ],
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'EVA Finanzas - ¿Tu empresa crea o destruye valor?',
-    description: 'Calcula tu EVA automáticamente y descubre si tu negocio genera riqueza real.',
-    images: ['/og-image.jpg'],
+    card: "summary_large_image",
+    title: "EVA Finanzas - ¿Tu empresa crea o destruye valor?",
+    description: "Calcula tu EVA automáticamente y descubre si tu negocio genera riqueza real.",
+    images: ["/og-image.jpg"],
   },
   robots: {
     index: true,
@@ -50,17 +63,17 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
-    generator: 'v0.app'
+  generator: "v0.app",
 }
 
 export const viewport = {
-  themeColor: '#10b981',
-  width: 'device-width',
+  themeColor: "#10b981",
+  width: "device-width",
   initialScale: 1,
 }
 
@@ -76,36 +89,36 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'SoftwareApplication',
-              name: 'EVA Finanzas',
-              applicationCategory: 'BusinessApplication',
-              operatingSystem: 'Web',
-              description: 'Plataforma de gestión financiera basada en Economic Value Added (EVA) para PYMEs',
-              url: 'https://www.evafinanzas.com',
+              "@context": "https://schema.org",
+              "@type": "SoftwareApplication",
+              name: "EVA Finanzas",
+              applicationCategory: "BusinessApplication",
+              operatingSystem: "Web",
+              description: "Plataforma de gestión financiera basada en Economic Value Added (EVA) para PYMEs",
+              url: "https://www.evafinanzas.com",
               offers: {
-                '@type': 'AggregateOffer',
-                lowPrice: '16',
-                highPrice: '119',
-                priceCurrency: 'USD',
-                offerCount: '3',
+                "@type": "AggregateOffer",
+                lowPrice: "16",
+                highPrice: "119",
+                priceCurrency: "USD",
+                offerCount: "3",
               },
               aggregateRating: {
-                '@type': 'AggregateRating',
-                ratingValue: '4.8',
-                ratingCount: '127',
-                bestRating: '5',
-                worstRating: '1',
+                "@type": "AggregateRating",
+                ratingValue: "4.8",
+                ratingCount: "127",
+                bestRating: "5",
+                worstRating: "1",
               },
               contactPoint: {
-                '@type': 'ContactPoint',
-                telephone: '+52-999-570-8837',
-                contactType: 'Customer Service',
-                email: 'sierrascompany2025@gmail.com',
-                availableLanguage: ['Spanish', 'English'],
+                "@type": "ContactPoint",
+                telephone: "+52-999-570-8837",
+                contactType: "Customer Service",
+                email: "sierrascompany2025@gmail.com",
+                availableLanguage: ["Spanish", "English"],
               },
-              keywords: 'EVA, Economic Value Added, WACC, finanzas empresariales, PYMEs',
-              inLanguage: 'es-MX',
+              keywords: "EVA, Economic Value Added, WACC, finanzas empresariales, PYMEs",
+              inLanguage: "es-MX",
             }),
           }}
         />

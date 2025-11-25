@@ -1,0 +1,58 @@
+export const STRIPE_PRODUCTS = {
+  base: {
+    id: "prod_TUJtWgIhJQmANM",
+    name: "Plan Base",
+    description: "Para empezar a medir tu creación de valor",
+    price: 16,
+    currency: "usd",
+    interval: "month",
+    features: [
+      "Cálculo EVA básico",
+      "Dashboard principal",
+      "1 empresa",
+      "Importación manual",
+      "WACC básico",
+      "Histórico de 12 meses",
+      "Soporte por email",
+    ],
+  },
+  pro: {
+    id: "prod_TUJwvXxMQq15Ek",
+    name: "Plan Pro",
+    description: "Para empresas que quieren control total",
+    price: 49,
+    currency: "usd",
+    interval: "month",
+    features: [
+      "Todo en Base, más:",
+      "Motor contable completo (AC Engine)",
+      "WACC profesional (WaaS)",
+      "Análisis de escenarios",
+      "Integraciones API",
+      "Hasta 3 empresas",
+      "Histórico ilimitado",
+      "Exportación de reportes",
+    ],
+    popular: true,
+  },
+  enterprise: {
+    id: "prod_TUJxOqzuHI1yAU",
+    name: "Plan Enterprise",
+    description: "Para corporativos y grupos empresariales",
+    price: 119,
+    currency: "usd",
+    interval: "month",
+    features: [
+      "Todo en Pro, más:",
+      "EVA por unidades de negocio",
+      "Módulo de compensaciones",
+      "Bonus Bank automático",
+      "Multiusuario ilimitado",
+      "Empresas ilimitadas",
+      "Onboarding personalizado",
+      "Soporte prioritario 24/7",
+    ],
+  },
+} as const
+
+export type PlanType = keyof typeof STRIPE_PRODUCTS

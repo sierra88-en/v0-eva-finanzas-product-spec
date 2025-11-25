@@ -1,18 +1,19 @@
-import { Button } from '@/components/ui/button'
-import { Card } from '@/components/ui/card'
-import { ArrowRight, CheckCircle, TrendingUp, DollarSign, Users, Shield, BarChart3, Zap, Target, Building2 } from 'lucide-react'
-import Link from 'next/link'
-import { Navbar } from '@/components/navbar'
-import { Footer } from '@/components/footer'
-import type { Metadata } from 'next'
+import { Button } from "@/components/ui/button"
+import { Card } from "@/components/ui/card"
+import { ArrowRight, CheckCircle, TrendingUp, Users, BarChart3, Zap, Target, Building2 } from "lucide-react"
+import Link from "next/link"
+import { Navbar } from "@/components/navbar"
+import { Footer } from "@/components/footer"
+import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: 'EVA Finanzas - ¿Tu empresa crea o destruye valor real?',
-  description: 'Calcula automáticamente tu EVA (Economic Value Added). Transforma tu contabilidad en métricas estratégicas y toma decisiones basadas en creación de valor real. 14 días gratis.',
+  title: "EVA Finanzas - ¿Tu empresa crea o destruye valor real?",
+  description:
+    "Calcula automáticamente tu EVA (Economic Value Added). Transforma tu contabilidad en métricas estratégicas y toma decisiones basadas en creación de valor real. 14 días gratis.",
   openGraph: {
-    title: 'EVA Finanzas - ¿Tu empresa crea o destruye valor real?',
-    description: 'Plataforma de gestión financiera basada en Economic Value Added para PYMEs. Prueba gratis 14 días.',
-    url: 'https://www.evafinanzas.com',
+    title: "EVA Finanzas - ¿Tu empresa crea o destruye valor real?",
+    description: "Plataforma de gestión financiera basada en Economic Value Added para PYMEs. Prueba gratis 14 días.",
+    url: "https://www.evafinanzas.com",
   },
 }
 
@@ -23,22 +24,38 @@ export default function LandingPage() {
 
       <main id="main-content">
         {/* Hero Section */}
-        <section className="relative overflow-hidden bg-gradient-to-b from-slate-50 to-white py-20 sm:py-32" aria-labelledby="hero-heading">
+        <section
+          className="relative overflow-hidden bg-gradient-to-b from-slate-50 to-white py-20 sm:py-32"
+          aria-labelledby="hero-heading"
+        >
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-3xl text-center">
-              <h1 id="hero-heading" className="text-balance text-5xl font-bold tracking-tight text-slate-900 sm:text-6xl lg:text-7xl">
+              <h1
+                id="hero-heading"
+                className="text-balance text-5xl font-bold tracking-tight text-slate-900 sm:text-6xl lg:text-7xl"
+              >
                 ¿Tu empresa crea o destruye <span className="text-emerald-600">valor real</span>?
               </h1>
               <p className="mt-6 text-pretty text-lg leading-relaxed text-slate-600 sm:text-xl">
-                EVA Finanzas calcula automáticamente tu EVA (Economic Value Added), transforma tu contabilidad en métricas estratégicas y te dice si estás generando riqueza real.
+                EVA Finanzas calcula automáticamente tu EVA (Economic Value Added), transforma tu contabilidad en
+                métricas estratégicas y te dice si estás generando riqueza real.
               </p>
               <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-                <Button size="lg" className="gap-2 transition-all hover:scale-105 focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2" asChild>
+                <Button
+                  size="lg"
+                  className="gap-2 transition-all hover:scale-105 focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
+                  asChild
+                >
                   <Link href="/demo">
                     Comenzar Gratis <ArrowRight className="h-5 w-5" aria-hidden="true" />
                   </Link>
                 </Button>
-                <Button size="lg" variant="outline" className="transition-all hover:scale-105 focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2" asChild>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="transition-all hover:scale-105 focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 bg-transparent"
+                  asChild
+                >
                   <Link href="/demo">Ver Demo</Link>
                 </Button>
               </div>
@@ -57,16 +74,20 @@ export default function LandingPage() {
                 El problema que toda PYME enfrenta
               </h2>
               <p className="mt-6 text-pretty text-lg leading-relaxed text-slate-200">
-                Tienes utilidades contables, pero <strong className="text-white">¿realmente generas valor?</strong> La contabilidad tradicional no te dice si tu negocio está creando riqueza después de considerar el costo del capital.
+                Tienes utilidades contables, pero <strong className="text-white">¿realmente generas valor?</strong> La
+                contabilidad tradicional no te dice si tu negocio está creando riqueza después de considerar el costo
+                del capital.
               </p>
               <div className="mt-12 grid gap-6 sm:grid-cols-3">
                 <Card className="bg-slate-800 border-slate-700 p-6 text-white transition-all hover:bg-slate-750 hover:scale-105">
-                  <div className="text-4xl font-bold text-red-400" aria-label="87 por ciento">87%</div>
+                  <div className="text-4xl font-bold text-red-400" aria-label="87 por ciento">
+                    87%
+                  </div>
                   <p className="mt-2 text-sm text-slate-200">de las PYMEs no conocen su EVA real</p>
                 </Card>
                 <Card className="bg-slate-800 border-slate-700 p-6 text-white transition-all hover:bg-slate-750 hover:scale-105">
                   <div className="text-4xl font-bold text-red-400">$0</div>
-                  <p className="mt-2 text-sm text-slate-200">valor creado si tu rentabilidad {'<'} WACC</p>
+                  <p className="mt-2 text-sm text-slate-200">valor creado si tu rentabilidad {"<"} WACC</p>
                 </Card>
                 <Card className="bg-slate-800 border-slate-700 p-6 text-white transition-all hover:bg-slate-750 hover:scale-105">
                   <div className="text-4xl font-bold text-red-400">0</div>
@@ -81,22 +102,30 @@ export default function LandingPage() {
         <section className="py-16 sm:py-24" aria-labelledby="solution-heading">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-2xl text-center">
-              <h2 id="solution-heading" className="text-balance text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+              <h2
+                id="solution-heading"
+                className="text-balance text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl"
+              >
                 La solución: EVA automatizado y profesional
               </h2>
               <p className="mt-4 text-pretty text-lg text-slate-600 leading-relaxed">
-                EVA Finanzas hace el trabajo pesado por ti: ajustes contables, cálculo de WACC, proyecciones y análisis estratégico.
+                EVA Finanzas hace el trabajo pesado por ti: ajustes contables, cálculo de WACC, proyecciones y análisis
+                estratégico.
               </p>
             </div>
 
             <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
               <Card className="p-8 transition-all hover:shadow-lg hover:scale-105">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-100" aria-hidden="true">
+                <div
+                  className="flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-100"
+                  aria-hidden="true"
+                >
                   <Zap className="h-6 w-6 text-emerald-600" />
                 </div>
                 <h3 className="mt-4 text-xl font-semibold text-slate-900">Cálculo Automático</h3>
                 <p className="mt-2 text-slate-600 leading-relaxed">
-                  Transforma tu contabilidad tradicional en EVA real con ajustes automáticos de I+D, leasing, activos improductivos y más.
+                  Transforma tu contabilidad tradicional en EVA real con ajustes automáticos de I+D, leasing, activos
+                  improductivos y más.
                 </p>
               </Card>
 
@@ -126,7 +155,8 @@ export default function LandingPage() {
                 </div>
                 <h3 className="mt-4 text-xl font-semibold text-slate-900">EVA por Unidades</h3>
                 <p className="mt-2 text-slate-600 leading-relaxed">
-                  Desagrega tu EVA por departamento, sucursal o proyecto. Identifica dónde creas y dónde destruyes valor.
+                  Desagrega tu EVA por departamento, sucursal o proyecto. Identifica dónde creas y dónde destruyes
+                  valor.
                 </p>
               </Card>
 
@@ -157,7 +187,10 @@ export default function LandingPage() {
         <section className="bg-emerald-50 py-16 sm:py-24" aria-labelledby="how-it-works-heading">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-2xl text-center">
-              <h2 id="how-it-works-heading" className="text-balance text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+              <h2
+                id="how-it-works-heading"
+                className="text-balance text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl"
+              >
                 Cómo funciona
               </h2>
               <p className="mt-4 text-pretty text-lg text-slate-600">
@@ -167,7 +200,10 @@ export default function LandingPage() {
 
             <div className="mt-16 grid gap-8 md:grid-cols-3">
               <article className="text-center">
-                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-emerald-600 text-2xl font-bold text-white" aria-label="Paso 1">
+                <div
+                  className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-emerald-600 text-2xl font-bold text-white"
+                  aria-label="Paso 1"
+                >
                   1
                 </div>
                 <h3 className="mt-4 text-xl font-semibold text-slate-900">Conecta tu contabilidad</h3>
@@ -177,7 +213,10 @@ export default function LandingPage() {
               </article>
 
               <article className="text-center">
-                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-emerald-600 text-2xl font-bold text-white" aria-label="Paso 2">
+                <div
+                  className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-emerald-600 text-2xl font-bold text-white"
+                  aria-label="Paso 2"
+                >
                   2
                 </div>
                 <h3 className="mt-4 text-xl font-semibold text-slate-900">Ajustes automáticos</h3>
@@ -187,7 +226,10 @@ export default function LandingPage() {
               </article>
 
               <article className="text-center">
-                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-emerald-600 text-2xl font-bold text-white" aria-label="Paso 3">
+                <div
+                  className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-emerald-600 text-2xl font-bold text-white"
+                  aria-label="Paso 3"
+                >
                   3
                 </div>
                 <h3 className="mt-4 text-xl font-semibold text-slate-900">Obtén tu EVA</h3>
@@ -203,12 +245,16 @@ export default function LandingPage() {
         <section className="py-16 sm:py-24" aria-labelledby="pricing-heading">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-2xl text-center">
-              <h2 id="pricing-heading" className="text-balance text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+              <h2
+                id="pricing-heading"
+                className="text-balance text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl"
+              >
                 Planes diseñados para tu empresa
               </h2>
               <p className="mt-4 text-pretty text-lg text-slate-600">
                 Desde startups hasta corporativos, tenemos el plan perfecto para ti.
               </p>
+              <p className="mt-2 text-sm text-slate-500">Precios en dólares americanos (USD)</p>
             </div>
 
             <div className="mt-16 grid gap-8 lg:grid-cols-3">
@@ -218,7 +264,7 @@ export default function LandingPage() {
                 <p className="mt-2 text-slate-600">Para empezar a medir tu creación de valor</p>
                 <div className="mt-6">
                   <span className="text-5xl font-bold text-slate-900">$16</span>
-                  <span className="text-slate-600">/mes</span>
+                  <span className="text-slate-600"> USD/mes</span>
                 </div>
                 <ul className="mt-8 space-y-3">
                   <li className="flex items-start gap-3">
@@ -242,7 +288,7 @@ export default function LandingPage() {
                     <span className="text-slate-700">WACC básico</span>
                   </li>
                 </ul>
-                <Button className="mt-8 w-full" variant="outline">
+                <Button className="mt-8 w-full bg-transparent" variant="outline">
                   Comenzar gratis
                 </Button>
               </Card>
@@ -256,7 +302,7 @@ export default function LandingPage() {
                 <p className="mt-2 text-slate-600">Para empresas que quieren control total</p>
                 <div className="mt-6">
                   <span className="text-5xl font-bold text-slate-900">$49</span>
-                  <span className="text-slate-600">/mes</span>
+                  <span className="text-slate-600"> USD/mes</span>
                 </div>
                 <ul className="mt-8 space-y-3">
                   <li className="flex items-start gap-3">
@@ -284,9 +330,7 @@ export default function LandingPage() {
                     <span className="text-slate-700">Hasta 3 empresas</span>
                   </li>
                 </ul>
-                <Button className="mt-8 w-full">
-                  Comenzar ahora
-                </Button>
+                <Button className="mt-8 w-full">Comenzar ahora</Button>
               </Card>
 
               {/* Enterprise Plan */}
@@ -295,7 +339,7 @@ export default function LandingPage() {
                 <p className="mt-2 text-slate-600">Para corporativos y grupos empresariales</p>
                 <div className="mt-6">
                   <span className="text-5xl font-bold text-slate-900">$119</span>
-                  <span className="text-slate-600">/mes</span>
+                  <span className="text-slate-600"> USD/mes</span>
                 </div>
                 <ul className="mt-8 space-y-3">
                   <li className="flex items-start gap-3">
@@ -327,7 +371,7 @@ export default function LandingPage() {
                     <span className="text-slate-700">Soporte prioritario</span>
                   </li>
                 </ul>
-                <Button className="mt-8 w-full" variant="outline">
+                <Button className="mt-8 w-full bg-transparent" variant="outline">
                   Contactar ventas
                 </Button>
               </Card>
@@ -339,14 +383,18 @@ export default function LandingPage() {
         <section className="bg-slate-50 py-16 sm:py-24" aria-labelledby="testimonials-heading">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-2xl text-center">
-              <h2 id="testimonials-heading" className="text-balance text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+              <h2
+                id="testimonials-heading"
+                className="text-balance text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl"
+              >
                 Empresas que ya crean valor real
               </h2>
             </div>
             <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
               <Card className="p-6">
                 <p className="text-slate-700 italic">
-                  "Antes teníamos utilidades en papel, pero no sabíamos si realmente generábamos valor. EVA Finanzas nos abrió los ojos."
+                  "Antes teníamos utilidades en papel, pero no sabíamos si realmente generábamos valor. EVA Finanzas nos
+                  abrió los ojos."
                 </p>
                 <div className="mt-4 flex items-center gap-3">
                   <div className="h-10 w-10 rounded-full bg-emerald-200" />
@@ -358,7 +406,8 @@ export default function LandingPage() {
               </Card>
               <Card className="p-6">
                 <p className="text-slate-700 italic">
-                  "El módulo de compensaciones cambió nuestra cultura. Ahora todos piensan en crear valor, no solo en ventas."
+                  "El módulo de compensaciones cambió nuestra cultura. Ahora todos piensan en crear valor, no solo en
+                  ventas."
                 </p>
                 <div className="mt-4 flex items-center gap-3">
                   <div className="h-10 w-10 rounded-full bg-blue-200" />
@@ -370,7 +419,8 @@ export default function LandingPage() {
               </Card>
               <Card className="p-6">
                 <p className="text-slate-700 italic">
-                  "Identificamos que 2 de nuestras 5 sucursales destruían valor. Tomamos decisiones estratégicas que salvaron la empresa."
+                  "Identificamos que 2 de nuestras 5 sucursales destruían valor. Tomamos decisiones estratégicas que
+                  salvaron la empresa."
                 </p>
                 <div className="mt-4 flex items-center gap-3">
                   <div className="h-10 w-10 rounded-full bg-purple-200" />
@@ -395,18 +445,26 @@ export default function LandingPage() {
                 Únete a cientos de empresas que ya toman decisiones basadas en EVA, no en intuición.
               </p>
               <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-                <Button size="lg" variant="secondary" className="gap-2 transition-all hover:scale-105 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-emerald-600" asChild>
+                <Button
+                  size="lg"
+                  variant="secondary"
+                  className="gap-2 transition-all hover:scale-105 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-emerald-600"
+                  asChild
+                >
                   <Link href="/demo">
                     Comenzar Gratis <ArrowRight className="h-5 w-5" aria-hidden="true" />
                   </Link>
                 </Button>
-                <Button size="lg" variant="outline" className="border-2 border-white bg-transparent text-white transition-all hover:bg-white hover:text-emerald-600 hover:scale-105 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-emerald-600" asChild>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-2 border-white bg-transparent text-white transition-all hover:bg-white hover:text-emerald-600 hover:scale-105 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-emerald-600"
+                  asChild
+                >
                   <Link href="/contact">Agendar Demo</Link>
                 </Button>
               </div>
-              <p className="mt-4 text-sm text-emerald-50">
-                14 días gratis • No requiere tarjeta • Soporte en español
-              </p>
+              <p className="mt-4 text-sm text-emerald-50">14 días gratis • No requiere tarjeta • Soporte en español</p>
             </div>
           </div>
         </section>
