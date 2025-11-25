@@ -5,6 +5,8 @@ import { STRIPE_PRODUCTS, type PlanType } from "@/lib/stripe/products"
 
 export async function createCheckoutSession(plan: PlanType, customerEmail?: string) {
   try {
+    console.log("[v0] Creating checkout session for plan:", plan)
+
     if (!STRIPE_PRODUCTS[plan]) {
       throw new Error("Plan inválido")
     }
@@ -12,19 +14,14 @@ export async function createCheckoutSession(plan: PlanType, customerEmail?: stri
     const product = STRIPE_PRODUCTS[plan]
     const origin = process.env.NEXT_PUBLIC_SITE_URL || "https://www.evafinanzas.com"
 
+    console.log("[v0] Using priceId:", product.priceId)
+
     const session = await stripe.checkout.sessions.create({
       mode: "subscription",
       payment_method_types: ["card"],
       line_items: [
         {
-          price_data: {
-            currency: product.currency,
-            product: product.id,
-            recurring: {
-              interval: product.interval,
-            },
-            unit_amount: product.price * 100,
-          },
+          price: product.priceId, // Using priceId directly
           quantity: 1,
         },
       ],
@@ -44,10 +41,12 @@ export async function createCheckoutSession(plan: PlanType, customerEmail?: stri
       billing_address_collection: "required",
     })
 
+    console.log("[v0] Checkout session created:", session.id)
     return { url: session.url, sessionId: session.id }
   } catch (error) {
     console.error("[v0] Error creating checkout session:", error)
-    throw new Error("Error al crear la sesión de pago")
+    const errorMessage = error instanceof Error ? error.message : "Unknown error"
+    throw new Error(`Error al crear la sesión de pago: ${errorMessage}`)
   }
 }
 

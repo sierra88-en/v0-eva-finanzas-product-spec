@@ -1,11 +1,12 @@
 export const STRIPE_PRODUCTS = {
   base: {
     id: "prod_TUJtWgIhJQmANM",
+    priceId: "price_base_replace",
     name: "Plan Base",
     description: "Para empezar a medir tu creación de valor",
     price: 16,
     currency: "usd",
-    interval: "month",
+    interval: "month" as const,
     features: [
       "Cálculo EVA básico",
       "Dashboard principal",
@@ -18,11 +19,12 @@ export const STRIPE_PRODUCTS = {
   },
   pro: {
     id: "prod_TUJwvXxMQq15Ek",
+    priceId: "price_pro_replace",
     name: "Plan Pro",
     description: "Para empresas que quieren control total",
     price: 49,
     currency: "usd",
-    interval: "month",
+    interval: "month" as const,
     features: [
       "Todo en Base, más:",
       "Motor contable completo (AC Engine)",
@@ -37,11 +39,12 @@ export const STRIPE_PRODUCTS = {
   },
   enterprise: {
     id: "prod_TUJxOqzuHI1yAU",
+    priceId: "price_enterprise_replace",
     name: "Plan Enterprise",
     description: "Para corporativos y grupos empresariales",
     price: 119,
     currency: "usd",
-    interval: "month",
+    interval: "month" as const,
     features: [
       "Todo en Pro, más:",
       "EVA por unidades de negocio",

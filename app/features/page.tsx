@@ -1,21 +1,34 @@
-import { Navbar } from '@/components/navbar'
-import { Footer } from '@/components/footer'
-import { Card } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
-import { Zap, TrendingUp, Target, Building2, Users, BarChart3, CheckCircle, ArrowRight, Smartphone, Cloud, Lock } from 'lucide-react'
-import Link from 'next/link'
-import type { Metadata } from 'next'
+import { Navbar } from "@/components/navbar"
+import { Footer } from "@/components/footer"
+import { Card } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import {
+  Zap,
+  TrendingUp,
+  Target,
+  Building2,
+  Users,
+  BarChart3,
+  CheckCircle,
+  ArrowRight,
+  Smartphone,
+  Cloud,
+  Lock,
+} from "lucide-react"
+import Link from "next/link"
+import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: 'Características - EVA Finanzas',
-  description: 'Descubre todas las funcionalidades de EVA Finanzas: cálculo automático de EVA, WACC profesional, escenarios estratégicos, compensaciones y más.',
+  title: "Características - EVA Finanzas",
+  description:
+    "Descubre todas las funcionalidades de EVA Finanzas: cálculo automático de EVA, WACC profesional, escenarios estratégicos, compensaciones y más.",
   alternates: {
-    canonical: 'https://www.evafinanzas.com/features',
+    canonical: "https://www.evafinanzas.com/features",
   },
   openGraph: {
-    title: 'Características de EVA Finanzas - Todas las herramientas que necesitas',
-    description: 'Motor contable automático, WACC profesional, análisis de escenarios, EVA por unidades y más.',
-    url: 'https://www.evafinanzas.com/features',
+    title: "Características de EVA Finanzas - Todas las herramientas que necesitas",
+    description: "Motor contable automático, WACC profesional, análisis de escenarios, EVA por unidades y más.",
+    url: "https://www.evafinanzas.com/features",
   },
 }
 
@@ -29,11 +42,15 @@ export default function FeaturesPage() {
         <section className="bg-gradient-to-b from-slate-50 to-white py-20" aria-labelledby="features-hero-heading">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-3xl text-center">
-              <h1 id="features-hero-heading" className="text-balance text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
+              <h1
+                id="features-hero-heading"
+                className="text-balance text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl"
+              >
                 Todo lo que necesitas para gestionar el <span className="text-emerald-600">valor real</span>
               </h1>
               <p className="mt-6 text-pretty text-lg text-slate-600">
-                EVA Finanzas integra módulos profesionales de análisis financiero, ajustes contables automáticos y herramientas de decisión estratégica.
+                EVA Finanzas integra módulos profesionales de análisis financiero, ajustes contables automáticos y
+                herramientas de decisión estratégica.
               </p>
             </div>
           </div>
@@ -51,7 +68,8 @@ export default function FeaturesPage() {
                   </div>
                   <h2 className="mt-4 text-3xl font-bold text-slate-900">Motor Contable Automático</h2>
                   <p className="mt-4 text-lg text-slate-600">
-                    El AC Engine transforma tu contabilidad tradicional en métricas económicas reales aplicando ajustes profesionales de forma automática.
+                    El AC Engine transforma tu contabilidad tradicional en métricas económicas reales aplicando ajustes
+                    profesionales de forma automática.
                   </p>
                   <ul className="mt-6 space-y-3">
                     <li className="flex items-start gap-3">
@@ -74,7 +92,7 @@ export default function FeaturesPage() {
                 </div>
                 <Card className="p-8 bg-gradient-to-br from-emerald-50 to-white">
                   <div className="text-sm font-semibold text-emerald-600">NOPAT AJUSTADO</div>
-                  <div className="mt-2 text-4xl font-bold text-slate-900">$2.4M MXN</div>
+                  <div className="mt-2 text-4xl font-bold text-slate-900">$2.4M USD</div>
                   <div className="mt-1 text-sm text-slate-600">+18% vs utilidad contable</div>
                   <div className="mt-6 space-y-2">
                     <div className="flex justify-between text-sm">
@@ -128,7 +146,8 @@ export default function FeaturesPage() {
                   </div>
                   <h2 className="mt-4 text-3xl font-bold text-slate-900">WACC as a Service (WaaS)</h2>
                   <p className="mt-4 text-lg text-slate-600">
-                    Cálculo profesional del Costo Promedio Ponderado de Capital con metodología de valuación corporativa.
+                    Cálculo profesional del Costo Promedio Ponderado de Capital con metodología de valuación
+                    corporativa.
                   </p>
                   <ul className="mt-6 space-y-3">
                     <li className="flex items-start gap-3">
@@ -195,7 +214,7 @@ export default function FeaturesPage() {
                   <div className="mt-4 text-sm text-slate-600">
                     Aumento de deuda de $500K reduce WACC de 12.4% a 11.1%, creando $140K adicionales de valor.
                   </div>
-                  <Button className="mt-6 w-full" variant="outline">
+                  <Button className="mt-6 w-full bg-transparent" variant="outline">
                     Ver Análisis Completo
                   </Button>
                 </Card>
@@ -208,7 +227,9 @@ export default function FeaturesPage() {
         <section id="integrations" className="bg-slate-50 py-16" aria-labelledby="additional-features-heading">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-2xl text-center">
-              <h2 id="additional-features-heading" className="text-3xl font-bold text-slate-900">Más características profesionales</h2>
+              <h2 id="additional-features-heading" className="text-3xl font-bold text-slate-900">
+                Más características profesionales
+              </h2>
               <p className="mt-4 text-lg text-slate-600">
                 Todo lo que necesitas para tomar decisiones basadas en valor
               </p>
@@ -282,7 +303,12 @@ export default function FeaturesPage() {
                     Comenzar Gratis <ArrowRight className="h-5 w-5" aria-hidden="true" />
                   </Link>
                 </Button>
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-emerald-700" asChild>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-white text-white hover:bg-emerald-700 bg-transparent"
+                  asChild
+                >
                   <Link href="/pricing">Ver Precios</Link>
                 </Button>
               </div>

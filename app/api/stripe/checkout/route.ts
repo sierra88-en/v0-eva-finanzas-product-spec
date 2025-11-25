@@ -10,27 +10,25 @@ export async function POST(req: NextRequest) {
       customerEmail?: string
     }
 
+    console.log("[v0] Creating checkout session for plan:", plan)
+
     if (!plan || !STRIPE_PRODUCTS[plan]) {
+      console.error("[v0] Invalid plan:", plan)
       return NextResponse.json({ error: "Plan inválido" }, { status: 400 })
     }
 
     const product = STRIPE_PRODUCTS[plan]
-    const origin = req.headers.get("origin") || "https://www.evafinanzas.com"
+    const origin = req.headers.get("origin") || process.env.NEXT_PUBLIC_SITE_URL || "https://www.evafinanzas.com"
 
-    // Create Checkout Session
+    console.log("[v0] Using priceId:", product.priceId)
+
+    // Create Checkout Session using priceId
     const session = await stripe.checkout.sessions.create({
       mode: "subscription",
       payment_method_types: ["card"],
       line_items: [
         {
-          price_data: {
-            currency: product.currency,
-            product: product.id,
-            recurring: {
-              interval: product.interval,
-            },
-            unit_amount: product.price * 100, // Convert to cents
-          },
+          price: product.priceId, // Using priceId directly
           quantity: 1,
         },
       ],
@@ -50,9 +48,11 @@ export async function POST(req: NextRequest) {
       billing_address_collection: "required",
     })
 
+    console.log("[v0] Checkout session created:", session.id)
     return NextResponse.json({ sessionId: session.id, url: session.url })
   } catch (error) {
     console.error("[v0] Error creating checkout session:", error)
-    return NextResponse.json({ error: "Error al crear la sesión de pago" }, { status: 500 })
+    const errorMessage = error instanceof Error ? error.message : "Unknown error"
+    return NextResponse.json({ error: "Error al crear la sesión de pago", details: errorMessage }, { status: 500 })
   }
 }
