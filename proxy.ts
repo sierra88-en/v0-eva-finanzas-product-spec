@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server"
 import type { NextRequest } from "next/server"
 
-export async function middleware(request: NextRequest) {
+export async function proxy(request: NextRequest) {
   // Cuando agregues autenticación, descomenta la línea de abajo
   // return await updateSession(request)
 
