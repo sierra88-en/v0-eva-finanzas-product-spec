@@ -1,4 +1,13 @@
-# EVA Finanzas
+# 🏢 EVA Finanzas | Economic Value Added
+![Build Status](https://img.shields.io/badge/Status-In%20Development-yellow)
+![Next.js](https://img.shields.io/badge/Next.js-15-black)
+![Vercel](https://img.shields.io/badge/Deploy-Vercel-blue)
+
+> **"Lo que no se mide, no se crea; lo que no crea valor, se destruye."**
+
+### 🎯 Objetivo
+Democratizar el acceso a métricas financieras de élite para las pequeñas y medianas empresas, permitiendo que cualquier dueño de negocio sepa si realmente está ganando dinero después de cubrir el costo de su capital.
+ EVA Finanzas
 
 **La plataforma de gestión basada en valor económico agregado para PYMEs de Latinoamérica**
 
